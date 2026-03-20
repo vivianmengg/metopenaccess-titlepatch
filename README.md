@@ -22,7 +22,7 @@ This is a white earthenware cup dated 2800–2400 BCE. The title is in the syste
 ## What's in This Repo
 
 ### `title-patch.json`
-A ready-made mapping of `objectID → title` for **2,890 Chinese ceramic objects** where the CSV is blank but the API has a real title.
+A ready-made mapping of `objectID → title` for **2,892 Chinese ceramic objects** where the CSV is blank but the API has a real title.
 
 ```json
 {
@@ -36,6 +36,15 @@ A ready-made mapping of `objectID → title` for **2,890 Chinese ceramic objects
 Only objects where the API returned a non-empty, non-`"Untitled"` title are included. This covers the Chinese ceramics subset of the collection (Asian Art department, ceramic medium).
 
 **Suggested action:** Use as a lookup table to backfill the Title column in `MetObjects.csv` for the listed object IDs. No curatorial judgement required — these are titles already in your system.
+
+### `not-found-ids.json`
+A list of **191 object IDs** that appear in `MetObjects.csv` but return `"ObjectID not found"` from the Collection API. These are likely deaccessioned or merged records that were never removed from the CSV export.
+
+```json
+[45831, 45877, 45884, ...]
+```
+
+**Suggested action:** Cross-reference against internal records to confirm whether these objects have been deaccessioned, and if so, remove or flag them in the next CSV export.
 
 ### `fetch-title-patch.js`
 The script used to generate `title-patch.json`. Takes a list of untitled object IDs and queries `GET /public/collection/v1/objects/{id}` for each one. Checkpoint-based — safe to interrupt and re-run.
