@@ -48,10 +48,4 @@ Rate limit: 1.3s between requests (Met API requirement). ~1,800 objects ≈ 40 m
 
 ---
 
-## Related
-
-A trailing-space typo in the `Medium` field affecting 39 Bencharong ware records was filed separately: [metmuseum/openaccess#issue](https://github.com/metmuseum/openaccess/issues).
-
----
-
-*Generated from the [Chinese Ceramics Timeline](https://chineseceramics.netlify.app) project, March 2026.*
+*Discovered during the build for the [Chinese Ceramics Timeline](https://chineseceramics.netlify.app) project, March 2026.*
