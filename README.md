@@ -22,7 +22,7 @@ This is a white earthenware cup dated 2800–2400 BCE. The title is in the syste
 ## What's in This Repo
 
 ### `title-patch.json`
-A ready-made mapping of `objectID → title` for **1,127 Chinese ceramic objects** where the CSV is blank but the API has a real title.
+A ready-made mapping of `objectID → title` for **2,890 Chinese ceramic objects** where the CSV is blank but the API has a real title.
 
 ```json
 {
@@ -44,7 +44,7 @@ To extend to the full collection:
 1. Export all untitled object IDs from MetObjects.csv into `untitled-ids.json`: `[36447, 39523, ...]`
 2. Run `node fetch-title-patch.js`
 
-Rate limit: 1.3s between requests (Met API requirement). ~1,800 objects ≈ 40 min.
+Rate limit: 1.3s between requests (Met API requirement). ~3,083 objects ≈ 67 min.
 
 ---
 
